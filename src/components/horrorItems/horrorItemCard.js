@@ -1,8 +1,9 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 import { useParams } from "react-router"
 import { useState } from "react-router-dom"
 import { MyHorrorList } from "../nav/myList"
+import { addHorrorFavorite } from "../../modules/HorrorItemManager"
 
 export const HorrorCard = ({ horrorItem }) => {
     // create function to make new user item 
@@ -10,11 +11,20 @@ export const HorrorCard = ({ horrorItem }) => {
     // post new user item to database 
     // redirect user to my list
 
+    const history = useHistory();
+
+    const createNewHorrorFavorite = () => {
+        addHorrorFavorite({
+            horrorItemId: horrorItem.id,
+            userId: parseInt(sessionStorage.getItem("app_user_id"))
+        }).then(() => history.push("/horrorList"))
+    }
+
     return (
         <div className="horror-card">
             <div className="horror-card-content">
                 <Link to={`/horrorDetail/${horrorItem.id}`}><img src={horrorItem.img} alt="horror item image" className="horror-image" /></Link>
-                <button type="button" className="save-btn" onClick={null} >Save</button>
+                <button type="button" className="save-btn" onClick={createNewHorrorFavorite} >Save</button>
                 <img src="" alt="horror category icon" className="horror-icon" />
             </div>
         </div>
