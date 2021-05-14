@@ -1,6 +1,11 @@
 const remoteURL = "http://localhost:8088"
 
-export const getAllHorrorItems = (getCurrentUser) => {
+export const getAllHorrorItems = () => {
+    return fetch (`${remoteURL}/horrorItems`)
+    .then(response => response.json())
+}
+
+export const getAllHorrorPosts = (getCurrentUser) => {
     return fetch (`${remoteURL}/horrorItems/?userId=${getCurrentUser}`)
     .then(response => response.json())
 }
