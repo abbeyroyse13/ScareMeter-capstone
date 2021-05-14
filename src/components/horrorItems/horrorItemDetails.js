@@ -28,7 +28,7 @@ export const HorrorItemDetail = () => {
             <div className="horrorCategory"> {horrorItem.category} </div>
             <img src={horrorItem.img} className="horrorImg" />
             <ProgressBar min={25} max={100} now={50} animated variant="success"/>
-            <button onClick="" type="btn" >SCAREME!</button>
+            <button onClick={null} type="btn" >SCAREME!</button>
         </section>
     );
 };
