@@ -33,10 +33,6 @@ export const ApplicationViews = () => {
             </Route>
 
             <Route exact path="/horrorList">
-                <HorrorList />
-            </Route>
-
-            <Route exact path="/myHorrorList">
                 <MyHorrorList />
             </Route>
         </>

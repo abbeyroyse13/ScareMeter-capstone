@@ -10,6 +10,11 @@ export const getAllHorrorPosts = (getCurrentUser) => {
     .then(response => response.json())
 }
 
+export const getAllHorrorItemFavorites = () => {
+    return fetch (`${remoteURL}/horrorItemFavorites`)
+    .then(response => response.json())
+}
+
 export const addHorrorFavorite = (newHorrorFavorite) => {
     return fetch(`${remoteURL}/horrorItemFavorites`, {
         method: "POST",

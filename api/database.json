@@ -121,9 +121,14 @@
       "id": 2
     },
     {
-      "horrorItemId": 1,
+      "horrorItemId": 3,
       "userId": 3,
-      "id": 3
+      "id": 5
+    },
+    {
+      "horrorItemId": 2,
+      "userId": 3,
+      "id": 6
     }
   ]
 }
