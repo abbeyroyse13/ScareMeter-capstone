@@ -6,6 +6,8 @@ import { HorrorCard } from "../horrorItems/horrorItemCard";
   export const MyHorrorList = () => {
     const [horrorItems, setHorrorItems] = useState([]);
     const [horrorItemFavorites, setHorrorItemFavorites] = useState([]); 
+    const [isLoading, setIsLoading] = useState(false);
+
 
     const getHorrorItems = () => {
         return getAllHorrorItems().then(ItemsFromAPI => {

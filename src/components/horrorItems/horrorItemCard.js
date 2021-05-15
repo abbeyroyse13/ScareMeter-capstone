@@ -21,12 +21,14 @@ export const HorrorCard = ({ horrorItem }) => {
     }
 
     return (
-        <div className="horror-card">
-            <div className="horror-card-content">
+        <ul className="horror-card">
+            <li className="horror-card-content">
                 <Link to={`/horrorDetail/${horrorItem.id}`}><img src={horrorItem.img} alt="horror item image" className="horror-image" /></Link>
                 <button type="button" className="save-btn" onClick={createNewHorrorFavorite} >Save</button>
+                <button type="button" className="delete-btn" onClick={null} >-</button>
+                <button type="button" className="edit-btn" onClick={null} >Edit</button>
                 <img src="" alt="horror category icon" className="horror-icon" />
-            </div>
-        </div>
+            </li>
+        </ul>
     )
 }

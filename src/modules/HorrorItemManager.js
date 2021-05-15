@@ -43,5 +43,15 @@ export const addHorrorItem = (newHorrorItem) => {
 export const deleteHorrorItem = (id) => {
     return fetch(`${remoteURL}/horrorItems/${id}`, {
         method: "DELETE"
-    }).then(result => result.json())
+    }).then(response => response.json())
 }
+
+export const updateExistingHorrorItem = (editedHorrorItem) => {
+    return fetch(`${remoteURL}/horrorItems/${editedHorrorItem.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(editedHorrorItem)
+    }).then(data => data.json());
+  }

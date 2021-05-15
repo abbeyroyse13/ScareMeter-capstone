@@ -14,3 +14,11 @@ img {
 .save-btn {
     background-color: chartreuse;
 }
+
+.delete-btn {
+    background-color: crimson;
+}
+
+.edit-btn {
+    background-color: purple;
+}

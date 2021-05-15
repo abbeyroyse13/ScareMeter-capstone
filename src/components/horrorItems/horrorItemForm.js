@@ -87,7 +87,7 @@ export const HorrorItemForm = () => {
                                 {category.name}
                             </option>
                         ))}
-                        <option value="1">Movie</option>
+                        <option value="1" color="#FFC15E">Movie</option>
                         {horrorCategory.map(category => (
                             <option key={category.id} value={category.id}>
                                 {category.name}
