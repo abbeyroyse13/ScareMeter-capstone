@@ -1,42 +1,34 @@
 import React, { useState, useEffect } from "react"
-import { useParams, useHistory } from "react-router-dom"
+import { useParams, useHistory, Link } from "react-router-dom"
 import { getHorrorItemById } from "../../modules/HorrorItemManager"
+import ProgressBar from "react-bootstrap/ProgressBar"
 
 export const HorrorItemDetail = () => {
-    const [horrorItems, setHorrorItem] = useState({});
+    const [horrorItem, setHorrorItem] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
     const { horrorItemId } = useParams();
+    console.log(horrorItemId)
     const history = useHistory();
-
-    const deleteHorrorItem = () => {
-        setIsLoading(true);
-        deleteHorrorItem(horrorItemId).then(() =>
-            history.push("/horrorItems")
-        );
-    };
 
     useEffect(() => {
         console.log("useEffect", horrorItemId)
         getHorrorItemById(horrorItemId)
-            .then(horrorItems => {
-                setHorrorItem ({
-                    title: horrorItems.title,
-                    releaseDate: horrorItems.releaseDate,
-                    description: horrorItems.description,
-                    img: horrorItems.img
-                });
+            .then(horrorItem => {
+                setHorrorItem(horrorItem)
                 setIsLoading(false);
             });
-    }, [horrorItemId]);
+    }, []);
 
     return (
         <section className="horrorDetail">
-            <h3 className="title">Title {horrorItems.title} </h3>
-            <div className="releaseDate">Year Released {horrorItems.releaseDate} </div>
-            <div className="description">Description {horrorItems.description} </div>
-            <div className="horrorCategory">Category {horrorItems.category?.name} </div>
-            <div className="img">Add Image {horrorItems.img} </div>
+            <h3 className="horrortitle"> {horrorItem.title} </h3>
+            <div className="releaseDate"> {horrorItem.releaseDate} </div>
+            <div className="description"> {horrorItem.description} </div>
+            <div className="horrorCategory"> {horrorItem.category} </div>
+            <img src={horrorItem.img} className="horrorImg" />
+            <ProgressBar min={25} max={100} now={50} animated variant="success"/>
+            <button onClick={null} type="btn" >SCAREME!</button>
         </section>
     );
 };

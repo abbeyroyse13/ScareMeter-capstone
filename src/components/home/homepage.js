@@ -16,14 +16,9 @@ export const Home = () => {
                     +
             </button>
             </div>
-            <div className="sideBar">
-                <a href="/"><img src="" alt="movie logo" className="movieCategory" /></a>
-                <a href="/"><img src="" alt="show logo" className="showCategory" /></a>
-                <a href="/"><img src="" alt="game logo" className="gameCategory" /></a>
-                <a href="/"><img src="" alt="book logo" className="bookCategory" /></a>
-            </div>
             <div className="homePage">
             <HorrorList />
+            
             </div>
         </>
     )

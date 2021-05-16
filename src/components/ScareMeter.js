@@ -8,6 +8,7 @@ import "./ScareMeter.css"
 import "./home/homepage.css"
 
 export const ScareMeter = () => (
+
     <>
         <Route
             render={() => {
