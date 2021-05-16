@@ -6,10 +6,6 @@ import { MyHorrorList } from "../nav/myList"
 import { addHorrorFavorite, updateExistingHorrorItem } from "../../modules/HorrorItemManager"
 
 export const HorrorCard = ({ horrorItem }) => {
-    // create function to make new user item 
-    // with current user id & horror item id 
-    // post new user item to database 
-    // redirect user to my list
 
     const history = useHistory();
 
@@ -25,7 +21,6 @@ export const HorrorCard = ({ horrorItem }) => {
             <li className="horror-card-content">
                 <Link to={`/horrorDetail/${horrorItem.id}`}><img src={horrorItem.img} alt="horror item image" className="horror-image" /></Link>
                 <button type="button" className="save-btn" onClick={createNewHorrorFavorite} >Save</button>
-                {console.log(horrorItem.userId, sessionStorage.getItem("app_user_id"))}
                 {(horrorItem.userId === parseInt(sessionStorage.getItem("app_user_id")))?<><button type="button" className="delete-btn" onClick={null} >-</button>
                 <Link to={`/horrorPosts/${horrorItem.id}/edit`}>
                 <button type="button" className="edit-btn" >Edit</button>

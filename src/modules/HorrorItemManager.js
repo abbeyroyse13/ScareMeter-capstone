@@ -11,7 +11,7 @@ export const getAllHorrorPosts = (getCurrentUser) => {
 }
 
 export const getAllHorrorItemFavorites = () => {
-    return fetch (`${remoteURL}/horrorItemFavorites`)
+    return fetch (`${remoteURL}/horrorItemFavorites?userId=${sessionStorage.getItem("app_user_id")}&&_expand=horrorItem`)
     .then(response => response.json())
 }
 

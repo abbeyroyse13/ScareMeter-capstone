@@ -26,10 +26,8 @@ export const HorrorList = () => {
 
     const handleMediumOnClick = evt => {
         evt.preventDefault()
-        console.log(evt.target.id)
         setFilterItems(
             horrorItems.filter(item => {
-                console.log(typeof (item.categoryId))
                 if (item.categoryId === parseInt(evt.target.id)) {
                     return item
                 }

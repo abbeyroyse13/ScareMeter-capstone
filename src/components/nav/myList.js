@@ -3,9 +3,9 @@ import { useHistory } from "react-router"
 import { getAllHorrorItems, getAllHorrorItemFavorites } from "../../modules/HorrorItemManager";
 import { HorrorCard } from "../horrorItems/horrorItemCard";
 
-  export const MyHorrorList = () => {
+export const MyHorrorList = () => {
     const [horrorItems, setHorrorItems] = useState([]);
-    const [horrorItemFavorites, setHorrorItemFavorites] = useState([]); 
+    const [horrorItemFavorites, setHorrorItemFavorites] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
 
@@ -25,34 +25,41 @@ import { HorrorCard } from "../horrorItems/horrorItemCard";
         getHorrorItems()
         getHorrorItemFavorites()
     }, []);
-    
+
     useEffect(() => {
-        console.log("testing", filteredFavorites)
     }, []);
 
     useEffect(() => {
         getHorrorItems()
         getHorrorItemFavorites()
-    }, [horrorItemFavorites]);
-
-    // check filtering 
-    // if user has saved an item once, they shouldn't be able to save again
+    }, []);
 
     const currentUserId = parseInt(sessionStorage.getItem("app_user_id"))
 
-    const filteredFavorites = horrorItemFavorites.filter(favorite => favorite.userId === currentUserId)
+    let filteredFavorites = horrorItemFavorites.filter(favorite => favorite.userId === currentUserId)
 
-    const filteredHorrorItems = horrorItems.filter(horrorItem => horrorItem.userId === currentUserId)
+    let temp = []
 
-        return (
-            <>
+    filteredFavorites.forEach(element => {
+        let num = true 
+        for (let i = 0; i < temp.length; i++){
+            if (temp[i].horrorItem.id === element.horrorItem.id){
+                num = false 
+            }
+        } 
+        if (num){temp.push(element)}
+        return true 
+    });
+
+    return (
+        <>
             <div className="horrorItem-container">
-                {filteredHorrorItems.map(horrorItem =>
+                {temp.map(horrorItem =>
                     <HorrorCard
                         key={horrorItem.id}
-                        horrorItem={horrorItem} 
-                        />)}
+                        horrorItem={horrorItem.horrorItem}
+                    />)}
             </div>
         </>
-        )
-    }
+    )
+}
