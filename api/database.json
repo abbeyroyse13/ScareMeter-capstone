@@ -45,11 +45,11 @@
     ],
     "horrorItems": [{
             "id": 1,
-            "userId": 3,
             "title": "Death Stranding",
             "releaseDate": "2019",
             "description": "Death Stranding is a completely new type of action game, where the goal of the player is to reconnect isolated cities and a fragmented society. It is created so that all elements, including the story and gameplay, are bound together by the theme of the “Strand” or connection.",
             "categoryId": 3,
+            "userId": 3,
             "img": "https://upload.wikimedia.org/wikipedia/en/thumb/2/22/Death_Stranding.jpg/220px-Death_Stranding.jpg"
         },
         {
