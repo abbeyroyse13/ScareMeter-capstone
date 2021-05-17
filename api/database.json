@@ -1,129 +1,122 @@
 {
-    "users": [{
-            "id": 1,
-            "name": "Abbey Royse",
-            "email": "abbeyroyse@ar.com"
-        },
-        {
-            "id": 2,
-            "name": "Billy Loomis",
-            "email": "billyloomis@bl.com"
-        },
-        {
-            "id": 3,
-            "name": "Higgs Monaghan",
-            "email": "higgsmonaghan@hm.com"
-        },
-        {
-            "email": "negansmith@ns.com",
-            "name": "Negan Smith",
-            "id": 4
-        },
-        {
-            "email": "jeffblack@jb.com",
-            "name": "jeff black",
-            "id": 5
-        }
-    ],
-    "horrorCategory": [{
-            "id": 1,
-            "color": "#FFC15E",
-            "name": "movie"
-        },
-        {
-            "id": 2,
-            "name": "show"
-        },
-        {
-            "id": 3,
-            "name": "game"
-        },
-        {
-            "id": 4,
-            "name": "book"
-        }
-    ],
-    "horrorItems": [{
-            "id": 1,
-            "title": "Death Stranding",
-            "releaseDate": "2019",
-            "description": "Death Stranding is a completely new type of action game, where the goal of the player is to reconnect isolated cities and a fragmented society. It is created so that all elements, including the story and gameplay, are bound together by the theme of the “Strand” or connection.",
-            "categoryId": 3,
-            "userId": 3,
-            "img": "https://upload.wikimedia.org/wikipedia/en/thumb/2/22/Death_Stranding.jpg/220px-Death_Stranding.jpg"
-        },
-        {
-            "id": 2,
-            "userId": 2,
-            "title": "The Walking Dead",
-            "releaseDate": "2010 - Present",
-            "description": "The only thing that stops them is the Walkers, also known as Zombies. The Walking Dead tells the story of the months and years that follow after a zombie apocalypse. It follows a group of survivors, led by former police officer Rick Grimes, who travel in search of a safe and secure home.",
-            "categoryId": 2,
-            "img": "https://m.media-amazon.com/images/I/51NwXAjA85L._AC_.jpg"
-        },
-        {
-            "id": 3,
-            "userId": 1,
-            "title": "Doctor Sleep",
-            "releaseDate": "2019",
-            "description": "Struggling with alcoholism, Dan Torrance remains traumatized by the sinister events that occurred at the Overlook Hotel when he was a child. His hope for a peaceful existence soon becomes shattered when he meets Abra, a teen who shares his extrasensory gift of the 'shine.' Together, they form an unlikely alliance to battle the True Knot, a cult whose members try to feed off the shine of innocents to become immortal.",
-            "categoryId": 1,
-            "img": "https://m.media-amazon.com/images/M/MV5BYmY3NGJlYTItYmQ4OS00ZTEwLWIzODItMjMzNWU2MDE0NjZhXkEyXkFqcGdeQXVyMzQzMDA3MTI@._V1_.jpg"
-        },
-        {
-            "id": 4,
-            "userId": 1,
-            "title": "IT",
-            "releaseDate": "1986",
-            "description": "Seven young outcasts in Derry, Maine, are about to face their worst nightmare -- an ancient, shape-shifting evil that emerges from the sewer every 27 years to prey on the town's children. Banding together over the course of one horrifying summer, the friends must overcome their own personal fears to battle the murderous, bloodthirsty clown known as Pennywise.",
-            "categoryId": 4,
-            "img": "https://images-na.ssl-images-amazon.com/images/I/71lZgzNE2kL.jpg"
-        },
-        {
-            "title": "Scream",
-            "releaseDate": "1996",
-            "description": "scary guy on phone",
-            "categoryId": 1,
-            "userId": 3,
-            "img": "https://images-na.ssl-images-amazon.com/images/I/7114ViRptyL._AC_SY550_.jpg",
-            "id": 8
-        },
-        {
-            "title": "Halloween",
-            "releaseDate": "1979",
-            "description": "man with knife stalks sister",
-            "categoryId": 1,
-            "userId": 3,
-            "img": "https://images-na.ssl-images-amazon.com/images/I/71idgPXq-jL._AC_SL1500_.jpg",
-            "id": 11
-        }
-    ],
-    "userItems": [{
-        "id": 1,
-        "userId": 3,
-        "comments": "Hahaha world domination!",
-        "rating": 100,
-        "horrorItemId": 1
-    }],
-    "horrorItemFavorites": [{
-            "horrorItemId": 1,
-            "userId": 3,
-            "id": 2
-        },
-        {
-            "horrorItemId": 3,
-            "userId": 3,
-            "id": 5
-        },
-        {
-            "horrorItemId": 2,
-            "userId": 3,
-            "id": 6
-        },
-        {
-            "horrorItemId": 3,
-            "userId": 3,
-            "id": 7
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "name": "Abbey Royse",
+      "email": "abbeyroyse@ar.com"
+    },
+    {
+      "id": 2,
+      "name": "Billy Loomis",
+      "email": "billyloomis@bl.com"
+    },
+    {
+      "id": 3,
+      "name": "Higgs Monaghan",
+      "email": "higgsmonaghan@hm.com"
+    },
+    {
+      "email": "negansmith@ns.com",
+      "name": "Negan Smith",
+      "id": 4
+    },
+    {
+      "email": "jeffblack@jb.com",
+      "name": "jeff black",
+      "id": 5
+    }
+  ],
+  "horrorCategory": [
+    {
+      "id": 1,
+      "color": "#FFC15E",
+      "name": "movie"
+    },
+    {
+      "id": 2,
+      "name": "show"
+    },
+    {
+      "id": 3,
+      "name": "game"
+    },
+    {
+      "id": 4,
+      "name": "book"
+    }
+  ],
+  "horrorItems": [
+    {
+      "id": 1,
+      "title": "Death Stranding",
+      "releaseDate": "2019",
+      "description": "Death Stranding is a completely new type of action game, where the goal of the player is to reconnect isolated cities and a fragmented society. It is created so that all elements, including the story and gameplay, are bound together by the theme of the “Strand” or connection.",
+      "categoryId": 3,
+      "userId": 3,
+      "img": "https://upload.wikimedia.org/wikipedia/en/thumb/2/22/Death_Stranding.jpg/220px-Death_Stranding.jpg"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "title": "The Walking Dead",
+      "releaseDate": "2010 - Present",
+      "description": "The only thing that stops them is the Walkers, also known as Zombies. The Walking Dead tells the story of the months and years that follow after a zombie apocalypse. It follows a group of survivors, led by former police officer Rick Grimes, who travel in search of a safe and secure home.",
+      "categoryId": 2,
+      "img": "https://m.media-amazon.com/images/I/51NwXAjA85L._AC_.jpg"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "title": "Doctor Sleep",
+      "releaseDate": "2019",
+      "description": "Struggling with alcoholism, Dan Torrance remains traumatized by the sinister events that occurred at the Overlook Hotel when he was a child. His hope for a peaceful existence soon becomes shattered when he meets Abra, a teen who shares his extrasensory gift of the 'shine.' Together, they form an unlikely alliance to battle the True Knot, a cult whose members try to feed off the shine of innocents to become immortal.",
+      "categoryId": 1,
+      "img": "https://m.media-amazon.com/images/M/MV5BYmY3NGJlYTItYmQ4OS00ZTEwLWIzODItMjMzNWU2MDE0NjZhXkEyXkFqcGdeQXVyMzQzMDA3MTI@._V1_.jpg"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "title": "IT",
+      "releaseDate": "1986",
+      "description": "Seven young outcasts in Derry, Maine, are about to face their worst nightmare -- an ancient, shape-shifting evil that emerges from the sewer every 27 years to prey on the town's children. Banding together over the course of one horrifying summer, the friends must overcome their own personal fears to battle the murderous, bloodthirsty clown known as Pennywise.",
+      "categoryId": 4,
+      "img": "https://images-na.ssl-images-amazon.com/images/I/71lZgzNE2kL.jpg"
+    }
+  ],
+  "userItems": [
+    {
+      "id": 1,
+      "userId": 3,
+      "comments": "Hahaha world domination!",
+      "rating": 100,
+      "horrorItemId": 1
+    }
+  ],
+  "horrorItemFavorites": [
+    {
+      "horrorItemId": 1,
+      "userId": 3,
+      "id": 2
+    },
+    {
+      "horrorItemId": 3,
+      "userId": 3,
+      "id": 5
+    },
+    {
+      "horrorItemId": 2,
+      "userId": 3,
+      "id": 6
+    },
+    {
+      "horrorItemId": 3,
+      "userId": 3,
+      "id": 7
+    },
+    {
+      "horrorItemId": 4,
+      "userId": 3,
+      "id": 8
+    }
+  ]
 }

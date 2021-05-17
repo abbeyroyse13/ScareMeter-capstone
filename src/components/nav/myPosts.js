@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react"
-import { useHistory } from "react-router"
-import { deleteHorrorItem, getAllHorrorPosts } from "../../modules/HorrorItemManager";
+import { getAllHorrorPosts } from "../../modules/HorrorItemManager";
 import { HorrorCard } from "../horrorItems/horrorItemCard";
-import { HorrorItemForm } from "../horrorItems/horrorItemForm"
 
 export const HorrorPosts = () => {
     const [horrorItems, setHorrorItems] = useState([]);
@@ -14,11 +12,6 @@ export const HorrorPosts = () => {
         });
     };
 
-    const handleDeleteHorrorItem = id => {
-        deleteHorrorItem(id)
-            .then(() => getAllHorrorPosts().then(setHorrorItems));
-    }
-
     useEffect(() => {
         getHorrorPosts();
     }, []);
@@ -27,7 +20,8 @@ export const HorrorPosts = () => {
         <>
             <div>
                 {horrorItems.map(horrorItemPost => 
-                    { return <HorrorCard key={horrorItemPost.id} horrorItem={horrorItemPost}/> })}
+                    { return <HorrorCard key={horrorItemPost.id} horrorItem={horrorItemPost}/> 
+                    })}
             </div>
         </>
     )

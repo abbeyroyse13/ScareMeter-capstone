@@ -1,11 +1,8 @@
 import React from "react"
 import { Link, useHistory } from "react-router-dom"
-import { useParams } from "react-router"
-import { useState } from "react-router-dom"
-import { MyHorrorList } from "../nav/myList"
-import { addHorrorFavorite, updateExistingHorrorItem } from "../../modules/HorrorItemManager"
+import { addHorrorFavorite, deleteHorrorItem } from "../../modules/HorrorItemManager"
 
-export const HorrorCard = ({ horrorItem }) => {
+export const HorrorCard = ({ horrorItem, handleDeleteHorrorItem }) => {
 
     const history = useHistory();
 
@@ -19,9 +16,9 @@ export const HorrorCard = ({ horrorItem }) => {
     return (
         <ul className="horror-card">
             <li className="horror-card-content">
-                <Link to={`/horrorDetail/${horrorItem.id}`}><img src={horrorItem.img} alt="horror item image" className="horror-image" /></Link>
+                <Link to={`/horrorDetail/${horrorItem.id}`}><img src={horrorItem.img} alt="horror item pic" className="horror-image" /></Link>
                 <button type="button" className="save-btn" onClick={createNewHorrorFavorite} >Save</button>
-                {(horrorItem.userId === parseInt(sessionStorage.getItem("app_user_id")))?<><button type="button" className="delete-btn" onClick={null} >-</button>
+                {(horrorItem.userId === parseInt(sessionStorage.getItem("app_user_id")))?<><button type="button" className="delete-btn" onClick={() => handleDeleteHorrorItem(horrorItem.id)} >-</button>
                 <Link to={`/horrorPosts/${horrorItem.id}/edit`}>
                 <button type="button" className="edit-btn" >Edit</button>
                 </Link></>:""}

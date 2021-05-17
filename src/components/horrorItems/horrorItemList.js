@@ -5,7 +5,6 @@ import { HorrorCard } from "./horrorItemCard";
 
 export const HorrorList = () => {
     const [horrorItems, setHorrorItems] = useState([]);
-    // add favorites here 
     const [filterItems, setFilterItems] = useState([]);
 
     const getHorrorItems = () => {
@@ -16,8 +15,10 @@ export const HorrorList = () => {
     };
 
     const handleDeleteHorrorItem = id => {
+        debugger
         deleteHorrorItem(id)
-            .then(() => getAllHorrorItems().then(setHorrorItems));
+            .then(() => getAllHorrorItems()
+            )
     }
 
     useEffect(() => {

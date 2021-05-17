@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { useHistory } from "react-router"
-import { getAllHorrorItems, getAllHorrorItemFavorites } from "../../modules/HorrorItemManager";
+import { getAllHorrorItems, getAllHorrorItemFavorites, deleteHorrorItem } from "../../modules/HorrorItemManager";
 import { HorrorCard } from "../horrorItems/horrorItemCard";
 
 export const MyHorrorList = () => {
@@ -14,6 +13,11 @@ export const MyHorrorList = () => {
             setHorrorItems(ItemsFromAPI)
         });
     };
+
+    const handleDeleteHorrorItem = id => {
+        deleteHorrorItem(id)
+            .then(() => getAllHorrorItems().then(setHorrorItems));
+    }
 
     const getHorrorItemFavorites = () => {
         return getAllHorrorItemFavorites().then(ItemsFromAPI => {
@@ -58,7 +62,7 @@ export const MyHorrorList = () => {
                     <HorrorCard
                         key={horrorItem.id}
                         horrorItem={horrorItem.horrorItem}
-                    />)}
+                        handleDeleteHorrorItem={handleDeleteHorrorItem} />)}
             </div>
         </>
     )
